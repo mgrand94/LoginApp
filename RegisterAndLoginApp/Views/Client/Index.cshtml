@@ -1,0 +1,65 @@
+﻿@model IEnumerable<RegisterAndLoginApp.Models.ClientModel>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientInsurance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientAllowedHours)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientBcba)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainContact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainContactNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientInsurance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientAllowedHours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientBcba)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainContact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainContactNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
