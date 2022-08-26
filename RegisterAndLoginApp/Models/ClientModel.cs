@@ -16,7 +16,7 @@ namespace RegisterAndLoginApp.Models
         public string ClientInsurance { get; set; }
 
         [DisplayName("Allowed Insurance Hours:")]
-        public int ClientAllowedHours { get; set; }
+        public decimal ClientAllowedHours { get; set; }
 
         [DisplayName("BCBA Name:")]
         public string ClientBcba { get; set; }

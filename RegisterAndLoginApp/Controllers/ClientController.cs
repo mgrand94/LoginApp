@@ -9,9 +9,9 @@ namespace RegisterAndLoginApp.Controllers
     {
         public IActionResult Index()
         {
-            HardCodedSampleRepo hardCodedSampleRepo = new HardCodedSampleRepo();
+            ClientsDAO clients = new ClientsDAO();
                    
-            return View(hardCodedSampleRepo.GetAllClients());
+            return View(clients.GetAllClients());
         }
     }
 }
