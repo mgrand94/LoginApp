@@ -13,5 +13,16 @@ namespace RegisterAndLoginApp.Controllers
                    
             return View(clients.GetAllClients());
         }
+        public IActionResult SearchResults(string searchTerm)
+        {
+            ClientsDAO clients = new ClientsDAO();
+
+            List<ClientModel> clientList = clients.SearchClients(searchTerm);
+            return View("index", clientList);
+        }
+        public IActionResult SearchForm()
+        {
+            return View();
+        }
     }
 }
